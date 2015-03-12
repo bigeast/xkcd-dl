@@ -9,10 +9,10 @@ def xkcd_dl(low, high):
         f = a.read()
         imgurl, title, alt = re.findall(r'<img src="([^"]*)" title="([^"]*)" alt="([^"]*)"',f)[0]
         title = HTMLParser().unescape(title)
-        print str(n).ljust(3), imgurl.ljust(60), alt
-        xkcd = open('xkcd' + str(n) + '.html', 'wb')
-        xkcd.write(f)
-        xkcd.close()
+        print(str(n).ljust(3), imgurl.ljust(60), alt)
+        # xkcd = open('xkcd' + str(n) + '.html', 'wb')
+        # xkcd.write(f)
+        # xkcd.close()
         imgfile = open('xkcd ' + str(n) + ':' + alt + '.jpg', 'wb')
         img = urllib2.urlopen(imgurl).read()
         imgfile.write(img)
@@ -20,9 +20,8 @@ def xkcd_dl(low, high):
 
 Usage = "xkcd.py fromID [toID]"
 argc = len(sys.argv)
-print argc, sys.argv
 if argc > 3:
-    print Usage
+    print(Usage)
 else:
     if argc == 3:
         low = int(sys.argv[1])

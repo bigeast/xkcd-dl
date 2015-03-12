@@ -1,4 +1,4 @@
-This script is for downloading comics in XKCD[https://xkcd.com].
+This script is for downloading comics in [XKCD](https://xkcd.com).
 
 `./xkcd.py 30 50`
 
