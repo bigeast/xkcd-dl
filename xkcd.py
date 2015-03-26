@@ -12,10 +12,6 @@ def xkcd_dl(low, high):
         imgurl = res[0]
         title = res[1]
         alt = res[2]
- #       title = unicode(title)
- #       title = urllib2.unquote(title)
- #       title = HTMLParser().unescape(title)
- #       print title
         print(str(n).ljust(4), imgurl.ljust(60), alt)
         imgfile = open('xkcd ' + str(n) + ':' + alt + '.jpg', 'wb')
         img = urllib2.urlopen(imgurl).read()
